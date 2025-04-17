@@ -1,0 +1,42 @@
+# 🏢 Microsoft Entra ID - Administrative Units (AUs) Planner  
+
+_A structured template to plan and track AU deployment in Microsoft Entra ID (Azure AD)._  
+
+---
+
+## 📋 Template Structure  
+
+```markdown
+### 1️⃣ Administrative Unit Basics  
+| Field                     | Example Data              | Notes                               |
+|---------------------------|---------------------------|-------------------------------------|
+| **AU Name**               | `Sales Team`              | Unique identifier for the AU.       |
+| **Description**           | `All Sales dept users`    | Purpose/scope of the AU.            |
+| **Azure AD License**      | `Premium P1`              | Required (P1/P2). Free tier unsupported. |
+
+### 2️⃣ Scope Definition  
+| Field                     | Example Data              | Notes                               |
+|---------------------------|---------------------------|-------------------------------------|
+| **Users (Count)**         | `50`                      | Number of users in AU.              |
+| **Groups (Names)**        | `Sales-Group`             | Groups to include.                  |
+| **Devices (Count)**       | `10`                      | Only if managing devices.           |
+
+### 3️⃣ Role Assignments  
+| Field                     | Example Data              | Notes                               |
+|---------------------------|---------------------------|-------------------------------------|
+| **Role**                  | `Helpdesk Administrator`  | Least-privilege role.               |
+| **Admin User(s)**         | `helpdesk-sales@contoso.com` | Who gets this role?               |
+| **Scope**                 | `Entire AU`               | Granular control option.            |
+
+### 4️⃣ Validation & Testing  
+| Field                     | Example Data              | Notes                               |
+|---------------------------|---------------------------|-------------------------------------|
+| **Test User**             | `sales-user1@contoso.com` | Validate permissions post-setup.    |
+| **Expected Permissions**  | `Password reset for Sales Team only` | Verify restricted access.     |
+
+### 5️⃣ Status Tracking  
+| Field                     | Example Data              | Notes                               |
+|---------------------------|---------------------------|-------------------------------------|
+| **Creation Date**         | `2024-03-20`              | When AU was implemented.            |
+| **Status**                | `Active`                  | `Planned`/`Active`/`Verified`.      |
+| **Notes**                 | `Excluded executives.`    | Adjustments or exceptions.          |
